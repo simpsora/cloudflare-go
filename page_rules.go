@@ -35,6 +35,7 @@ Valid IDs are:
   disable_security
   edge_cache_ttl
   email_obfuscation
+  explicit_cache_control
   forwarding_url
   ip_geolocation
   mirage
@@ -52,26 +53,27 @@ type PageRuleAction struct {
 
 // PageRuleActions maps API action IDs to human-readable strings.
 var PageRuleActions = map[string]string{
-	"always_online":       "Always Online",            // Value of type string
-	"always_use_https":    "Always Use HTTPS",         // Value of type interface{}
-	"browser_cache_ttl":   "Browser Cache TTL",        // Value of type int
-	"browser_check":       "Browser Integrity Check",  // Value of type string
-	"cache_level":         "Cache Level",              // Value of type string
-	"disable_apps":        "Disable Apps",             // Value of type interface{}
-	"disable_performance": "Disable Performance",      // Value of type interface{}
-	"disable_railgun":     "Disable Railgun",          // Value of type string
-	"disable_security":    "Disable Security",         // Value of type interface{}
-	"edge_cache_ttl":      "Edge Cache TTL",           // Value of type int
-	"email_obfuscation":   "Email Obfuscation",        // Value of type string
-	"forwarding_url":      "Forwarding URL",           // Value of type map[string]interface
-	"ip_geolocation":      "IP Geolocation Header",    // Value of type string
-	"mirage":              "Mirage",                   // Value of type string
-	"rocket_loader":       "Rocker Loader",            // Value of type string
-	"security_level":      "Security Level",           // Value of type string
-	"server_side_exclude": "Server Side Excludes",     // Value of type string
-	"smart_errors":        "Smart Errors",             // Value of type string
-	"ssl":                 "SSL",                      // Value of type string
-	"waf":                 "Web Application Firewall", // Value of type string
+	"always_online":          "Always Online",            // Value of type string
+	"always_use_https":       "Always Use HTTPS",         // Value of type interface{}
+	"browser_cache_ttl":      "Browser Cache TTL",        // Value of type int
+	"browser_check":          "Browser Integrity Check",  // Value of type string
+	"cache_level":            "Cache Level",              // Value of type string
+	"disable_apps":           "Disable Apps",             // Value of type interface{}
+	"disable_performance":    "Disable Performance",      // Value of type interface{}
+	"disable_railgun":        "Disable Railgun",          // Value of type string
+	"disable_security":       "Disable Security",         // Value of type interface{}
+	"edge_cache_ttl":         "Edge Cache TTL",           // Value of type int
+	"email_obfuscation":      "Email Obfuscation",        // Value of type string
+	"explicit_cache_control": "Origin Cache Control",     // Value of type interface{}
+	"forwarding_url":         "Forwarding URL",           // Value of type map[string]interface
+	"ip_geolocation":         "IP Geolocation Header",    // Value of type string
+	"mirage":                 "Mirage",                   // Value of type string
+	"rocket_loader":          "Rocker Loader",            // Value of type string
+	"security_level":         "Security Level",           // Value of type string
+	"server_side_exclude":    "Server Side Excludes",     // Value of type string
+	"smart_errors":           "Smart Errors",             // Value of type string
+	"ssl":                    "SSL",                      // Value of type string
+	"waf":                    "Web Application Firewall", // Value of type string
 }
 
 // PageRule describes a Page Rule.
